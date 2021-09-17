@@ -1,6 +1,8 @@
 
 CC := gcc
 
+REMOTE_FLAGS := --static
+
 SRC_DIR := src/
 BIN_DIR := bin/
 
@@ -13,7 +15,7 @@ TEST_TARGET := $(BIN_DIR)write_byte
 all: $(DAEMON_TARGET) $(TEST_TARGET)
 
 $(DAEMON_TARGET): $(DAEMON_SRC)
-	$(CC) $^ -o $@
+	$(CC) $(REMOTE_FLAGS) $^ -o $@
 
 $(TEST_TARGET): $(TEST_SRC)
 	$(CC) $^ -o $@
