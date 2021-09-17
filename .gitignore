@@ -1,2 +1,3 @@
-bin/write_byte
 bin/daemon
+bin/write_byte
+bin/*_32
